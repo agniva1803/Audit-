@@ -205,7 +205,7 @@ export default function LeadCapture({ auditId, highSavings }: Props) {
         </button>
 
         <p style={{ fontSize: 11, color: "var(--text3)", textAlign: "center" }}>
-          No spam. Unsubscribe anytime. We don't sell your data.
+          No spam. Unsubscribe anytime. We don&apos;t sell your data.
         </p>
       </div>
     </div>

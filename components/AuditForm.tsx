@@ -39,9 +39,11 @@ export default function AuditForm() {
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
-        setEntries(parsed.entries ?? []);
-        setTeamSize(parsed.teamSize ?? 5);
-        setUseCase(parsed.useCase ?? "coding");
+        setTimeout(() => {
+          setEntries(parsed.entries ?? []);
+          setTeamSize(parsed.teamSize ?? 5);
+          setUseCase(parsed.useCase ?? "coding");
+        }, 0);
       } catch {}
     }
   }, []);
@@ -263,7 +265,7 @@ export default function AuditForm() {
           </div>
         )}
 
-        {entries.map((entry, i) => {
+        {entries.map((entry) => {
           const meta = TOOLS.find((t) => t.id === entry.toolId)!;
           return (
             <div

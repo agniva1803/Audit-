@@ -73,7 +73,7 @@ function computeEffectiveSpend(monthlySpend: number, seats: number, plan: { pric
 function analyseEntry(
   entry: { toolId: string; plan: string; monthlySpend: number; seats: number },
   useCase: string,
-  teamSize: number
+  _teamSize: number
 ): ToolRecommendation {
   const toolId = entry.toolId as import("@/types").ToolId;
   const meta = getToolMeta(toolId);
@@ -82,7 +82,6 @@ function analyseEntry(
     ? entry.monthlySpend
     : computeEffectiveSpend(entry.monthlySpend, entry.seats, currentPlan);
   const seats = entry.seats || 1;
-  const spendPerSeat = seats > 0 ? effectiveSpend / seats : effectiveSpend;
 
   let status: ToolRecommendation["status"] = "optimal";
   let action = "Keep current plan";
