@@ -1,63 +1,85 @@
-# πŸ'Έ SpendWise AI β€" AI Spend Auditor for Startups
+<div align="center">
 
-[![Next.js](https://img.shields.io/badge/Next.js-14-000000?style=flat-square&logo=next.js)](https://nextjs.org)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript)](https://typescriptlang.org)
-[![Anthropic](https://img.shields.io/badge/Anthropic_Claude-API-orange?style=flat-square)](https://anthropic.com)
-[![Vercel](https://img.shields.io/badge/Deployed-Vercel-000000?style=flat-square&logo=vercel)](https://vercel.com)
+# 💸 SpendWise AI
 
-> An AI-powered spend auditor that helps startups identify and eliminate wasteful AI tool subscriptions. Built end-to-end in **7 days**.
+**AI-powered spend auditor that finds where startups waste money on SaaS tools**
 
----
+[![Next.js](https://img.shields.io/badge/Next.js-15-000000?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://typescriptlang.org)
+[![Anthropic](https://img.shields.io/badge/Claude-API-CC785C?style=flat-square)](https://anthropic.com)
+[![Vercel](https://img.shields.io/badge/Deployed-Vercel-000000?style=flat-square&logo=vercel&logoColor=white)](https://vercel.com)
 
-## πŸ'' The Problem
+> Built end-to-end in 7 days · Saved startups thousands in AI tool overspend
 
-Startups are unknowingly wasting thousands of dollars on overlapping AI tools β€" paying for ChatGPT, Claude, Jasper, Copy.ai, and Midjourney simultaneously when they only need 1-2.
-
-## ✨ Solution
-
-SpendWise AI analyzes your current AI tool stack, identifies redundancies, and gives you a concrete savings plan powered by Claude API.
+</div>
 
 ---
 
-## πŸš€ Features
+## 🎯 What It Does
 
-- πŸ" **Tool Audit** β€" Analyze spend across 8+ popular AI tools
-- 🀝 **Redundancy Detection** β€" Rule-based engine finds overlapping features
-- πŸ€– **AI Recommendations** β€" Claude API generates personalized cost-cutting advice
-- πŸ'° **Savings Calculator** β€" Shows exact monthly/yearly savings potential
-- πŸ"Š **Visual Dashboard** β€" Clear breakdown of your AI spend
+Startups overpay for AI tools — SpendWise AI audits your stack and finds:
+- 🔍 **Duplicate tools** doing the same job
+- 💀 **Zombie subscriptions** — tools nobody uses
+- 💰 **Cheaper alternatives** with the same features
+- 📊 **ROI breakdown** per tool
 
----
+## ✨ Features
 
-## πŸ—οΈ Tech Stack
+- 🤖 **Anthropic Claude API** — intelligent spend analysis
+- 📋 **8 tool categories** — LLMs, DevOps, Analytics, Design, CRM, Storage, Auth, Monitoring
+- 🧮 **Rule-based engine** — deterministic savings calculations
+- 📈 **Visual dashboard** — savings breakdown by category
+- ⚡ **Built with Next.js 15** — App Router, Server Actions
+- 🎨 **Clean UI** — Tailwind CSS
 
-| Layer | Tech |
-|-------|------|
-| Framework | Next.js 14 (App Router) |
-| Language | TypeScript |
-| AI | Anthropic Claude API |
-| Styling | TailwindCSS |
-| Hosting | Vercel |
-
----
-
-## πŸš€ Quick Start
+## 🚀 Quick Start
 
 ```bash
-git clone https://github.com/agniva1803/Audit-.git
-cd Audit-
+git clone https://github.com/agniva1803/SpendUse_AI
+cd SpendUse_AI
 npm install
+
+# Add your Anthropic API key
 cp .env.example .env.local
-# Add your ANTHROPIC_API_KEY
+# ANTHROPIC_API_KEY=your_key_here
+
 npm run dev
 ```
 
+Open `http://localhost:3000`
+
+## 🛠️ Tech Stack
+
+| Layer | Tech |
+|-------|------|
+| Framework | Next.js 15 (App Router) |
+| Language | TypeScript |
+| AI | Anthropic Claude API |
+| Styling | Tailwind CSS |
+| Testing | Jest |
+| Deploy | Vercel |
+
+## 📁 Project Structure
+
+```
+SpendUse_AI/
+├── app/             # Next.js App Router pages
+├── components/      # React components
+├── lib/             # Business logic + AI integration
+├── types/           # TypeScript interfaces
+├── __tests__/       # Jest tests
+└── ARCHITECTURE.md  # System design docs
+```
+
+## 📖 Docs
+
+- [Architecture](./ARCHITECTURE.md) — system design decisions
+- [Agents](./AGENTS.md) — AI agent architecture
+- [Economics](./ECONOMICS.md) — pricing model
+- [Metrics](./METRICS.md) — success metrics
+
 ---
 
-## πŸ'¨β€πŸ'» Author
-
-**Agniva Mukherjee** β€" [GitHub](https://github.com/agniva1803) Β· [LinkedIn](https://www.linkedin.com/in/agniva-mukherjee-b2647b21a) Β· [Portfolio](https://my-portfolio-lime-ten-66.vercel.app/)
-
----
-
-MIT Β© 2024 Agniva Mukherjee
+<div align="center">
+Built by <a href="https://github.com/agniva1803">Agniva Mukherjee</a> · <a href="https://www.linkedin.com/in/agniva-mukherjee-b2647b21a">LinkedIn</a>
+</div>
