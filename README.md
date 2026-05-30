@@ -1,55 +1,63 @@
-# SpendWise AI — Free AI Spend Audit for Startups
+# πŸ'Έ SpendWise AI β€" AI Spend Auditor for Startups
 
-SpendWise AI is a free web app that audits your team's AI tool spend across Cursor, Claude, ChatGPT, GitHub Copilot, Gemini, Windsurf, and APIs — giving you a per-tool breakdown of overspend, with specific actions and monthly + annual savings estimates. Built as a lead-generation asset for [Credex](https://credex.rocks), which sells discounted AI infrastructure credits.
+[![Next.js](https://img.shields.io/badge/Next.js-14-000000?style=flat-square&logo=next.js)](https://nextjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript)](https://typescriptlang.org)
+[![Anthropic](https://img.shields.io/badge/Anthropic_Claude-API-orange?style=flat-square)](https://anthropic.com)
+[![Vercel](https://img.shields.io/badge/Deployed-Vercel-000000?style=flat-square&logo=vercel)](https://vercel.com)
 
-**Live:** [https://spendwise-ai.vercel.app](https://spendwise-ai.vercel.app)
-
----
-
-## Screenshots
-
-> Add screenshots or a Loom/YouTube link here after deploy.
+> An AI-powered spend auditor that helps startups identify and eliminate wasteful AI tool subscriptions. Built end-to-end in **7 days**.
 
 ---
 
-## Quick start
+## πŸ'' The Problem
+
+Startups are unknowingly wasting thousands of dollars on overlapping AI tools β€" paying for ChatGPT, Claude, Jasper, Copy.ai, and Midjourney simultaneously when they only need 1-2.
+
+## ✨ Solution
+
+SpendWise AI analyzes your current AI tool stack, identifies redundancies, and gives you a concrete savings plan powered by Claude API.
+
+---
+
+## πŸš€ Features
+
+- πŸ" **Tool Audit** β€" Analyze spend across 8+ popular AI tools
+- 🀝 **Redundancy Detection** β€" Rule-based engine finds overlapping features
+- πŸ€– **AI Recommendations** β€" Claude API generates personalized cost-cutting advice
+- πŸ'° **Savings Calculator** β€" Shows exact monthly/yearly savings potential
+- πŸ"Š **Visual Dashboard** β€" Clear breakdown of your AI spend
+
+---
+
+## πŸ—οΈ Tech Stack
+
+| Layer | Tech |
+|-------|------|
+| Framework | Next.js 14 (App Router) |
+| Language | TypeScript |
+| AI | Anthropic Claude API |
+| Styling | TailwindCSS |
+| Hosting | Vercel |
+
+---
+
+## πŸš€ Quick Start
 
 ```bash
-git clone https://github.com/agniva1803/spendwise-ai
-cd spendwise-ai
+git clone https://github.com/agniva1803/Audit-.git
+cd Audit-
 npm install
-
-# Copy env template
 cp .env.example .env.local
-# Fill in ANTHROPIC_API_KEY
-
+# Add your ANTHROPIC_API_KEY
 npm run dev
-# → http://localhost:3000
-```
-
-### Deploy to Vercel
-
-```bash
-npx vercel --prod
-# Set ANTHROPIC_API_KEY in Vercel dashboard > Settings > Environment Variables
-```
-
-### Run tests
-
-```bash
-npm test
 ```
 
 ---
 
-## Decisions
+## πŸ'¨β€πŸ'» Author
 
-1. **Next.js App Router over plain React** — SSR for result pages means shareable audit URLs get proper OG tags on first load without client-side hydration delay. Trade-off: more complex routing and `async params` in page components.
+**Agniva Mukherjee** β€" [GitHub](https://github.com/agniva1803) Β· [LinkedIn](https://www.linkedin.com/in/agniva-mukherjee-b2647b21a) Β· [Portfolio](https://my-portfolio-lime-ten-66.vercel.app/)
 
-2. **In-memory storage over Supabase for MVP** — Fastest to ship, no external dependency. Trade-off: audits expire on cold start. Migration path documented in `ARCHITECTURE.md`. The storage interface is abstracted so swapping is one file change.
+---
 
-3. **Rule-based audit engine, not LLM-driven** — The audit math uses deterministic rules with cited pricing data. An LLM would introduce hallucinated numbers and non-reproducible reasoning. AI is used only for the prose summary (gracefully falling back to a template on API failure). This is intentional and documented.
-
-4. **No login before value** — Email is captured after the audit result is shown, never before. This reduces drop-off on the critical conversion step. Trade-off: we can't pre-populate the form for returning users (mitigated by `localStorage` persistence).
-
-5. **Honeypot over reCAPTCHA for abuse protection** — hCaptcha/reCAPTCHA adds 200–400ms, requires CDN load, and annoys legitimate users. A hidden honeypot field blocks the vast majority of automated submissions with zero UX friction. Rate limiting (10 req/min per IP) covers the rest.
+MIT Β© 2024 Agniva Mukherjee
